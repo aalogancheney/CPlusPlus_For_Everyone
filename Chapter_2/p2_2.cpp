@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	// sqrt(x) returns the square root of x.
 	// pow(x, y) returns the number x raised to the power y.
 	float perimeter = 2 * (LETTER_WIDTH_IN + LETTER_HEIGHT_IN);
-	float diagonal = sqrt(pow(LETTER_HEIGHT_IN, 2) + pow(LETTER_WIDTH_IN, 2));
+	float diagonal = sqrt(pow(LETTER_HEIGHT_IN, 2) + pow(LETTER_WIDTH_IN, 2)); // Pythagorean Theorem.
 
 	std::cout << "The perimeter of a standard letter-size sheet of paper is " << perimeter << " inches." << std::endl;
 	std::cout << "The diagonal of a standard letter-size sheet of paper is " << diagonal << " inches." << std::endl;
