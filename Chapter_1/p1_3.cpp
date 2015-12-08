@@ -1,3 +1,7 @@
+/*
+	Write a program that asks for your name and greets you by name.
+*/
+
 #include <iostream>
 #include <string>
 
@@ -9,6 +13,7 @@ int main(int argc, char *argv[])
 	std::string input;
 	std::cin >> input;
 
+	// Outputs the user's inforamtion to the console. 
 	std::cout << "Hello, " << input << ". I'm glad to meet you!" << std::endl;
 
 	return 0;
