@@ -1,4 +1,4 @@
-##Chapter 1
+##Chapter 1: Introduction
 
 The first chapter of C++ For Everyone focuses on basic programs that produce output to the terminal, get input from the user, and ask the user to perform simple arethmitic calculations. For some of the programs in this chapter I have written them from the perspective of a new programmer, and for others I have explicitly used more advanced techniques, including loops and variable input. The differences are intended to show how programs can be made more robust with variables and how they can be adapted to user-needs. 
 
