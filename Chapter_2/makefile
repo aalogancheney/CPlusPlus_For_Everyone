@@ -1,6 +1,6 @@
 CXX = g++
 CXXFLAGS = -Wall
-EXECUTABLES = p2_1
+EXECUTABLES = p2_1 p2_2
 
 all: $(EXECUTABLES)
 
