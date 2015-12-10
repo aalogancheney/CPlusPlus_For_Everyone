@@ -26,32 +26,34 @@ Well-formatted code has several benefits over poorly-formatted code:
 
 The list goes on. 
 
-####Some examples
+####Variables
 
-Consider the following two pieces of code:
+Consider the following two snippets of code:
 
 ```
-int main(int argc, char *argv[]) {
-	std::cout << "Enter the dimensions of a rectangle: ";
-	float x, y;
-	std::cin >> x >> y;
-	float p = x + x + y + y;
-	std::cout << "The perimeter is " << p << std::end;
-	return 0;
-}
+float x, y;
+std::cin >> x >> y;
+float p = x + x + y + y;
+std::cout << p << std::endl;
 ```
 
 ```
-int main(int argc, char *argv[])
-{
-	std::cout << "Enter the dimensions of a rectangle: ";
-	float width, height;
-	std::cin >> width >> height;
-
-	const float perimeter = 2 * (width + height);
-
-	std::cout << "The perimeter is " << perimeter << std::endl;
-
-	return 0;
-}
+float width, height;
+std::cin >> width >> height;
+float petimeter = 2 * (width + height);
+std::cout << perimeter << std::endl;
 ```
+
+Both pieces of code do the exact same thing: they get input from a user, calculate the perimeter of a rectangle, and display that to a user. However, if you had never seen either of these pieces of code before it is much clearer what the second block is doing thanks to well-chosen variable names. 
+
+Whatever time is saved by typing fewer characters, it's no match for the long term benefit of having readable code with good variable names. The first piece of code would likely need a comment to explain what it's doing, whereas the second piece needs no explanation. This is the heart of self-documenting code: writing code well enough with descriptive variable names so that comments are only needed for tricky, interesting, or obscure pieces of code that cannot be written any other way. 
+
+When choosing variable names, it's good to have rules for how to choose names as well as how to write those names. Different companies will likely have their own standards, which you will need to adpot, but until then having your own standard will prepare you.
+
++ Prefer longer, descriptive variable names to shorter ones. `width` is better than `w`. Of course, don't go overboard: `widthOfTheRectangle` is too verbose.
++ Pick a convention for variables with multiple words:
+  + Pascal Case: `HereIsAPascalCaseVariable`. The first letter of each word is capitalized, including the first word.
+  + Camel Case: `hereIsAnExampleOfCamelCase`. The first letter of each word -- except the first word -- is capitalized.
+  + Underscores: `here_is_a_variable_with_underscores`. Each word is separated by underscores. 
+
+As long as you have a standard way of writing code, you will be fine. The goal is to have consistency across your programs.
