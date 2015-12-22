@@ -28,6 +28,7 @@ At first glance, the function seems simple enough. It takes two integer argument
 Below are some output values for small input of `m` and `n`.
 
 | m/n |  0  |  1  |  2  |  3  |  4  |
+| :-: | :-: | :-: | :-: | :-: | :-: |
 |  0  |  1  |  2  |  3  |  4  |  5  |  
 |  1  |  2  |  3  |  4  |  5  |  6  |
 |  2  |  3  |  5  |  7  |  9  |  11 |
@@ -35,6 +36,11 @@ Below are some output values for small input of `m` and `n`.
 |  4  |  13 | 65533 | ... | ... | ... |
 
 There is an immediate explosion for the values where `m = 4`. 
+
+|                          |  Bonnie Stays Silent  |  Bonnie Betrays Clyde |
+|:------------------------:|:---------------------:|:---------------------:|
+|  **Clyde Stays Silent**  | Bonnie = 1, Clyde = 1 | Bonnie = 0, Clyde = 3 |
+| **Clyde Betrays Bonnie** | Bonnie = 3, Clyde = 0 | Bonnie = 2, Clyde = 2 |
 
 
 
