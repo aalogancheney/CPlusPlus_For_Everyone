@@ -37,13 +37,20 @@ Below are some output values for small input of `m` and `n`.
 
 There is an immediate explosion for the values where `m = 4`. 
 
-|                          |  Bonnie Stays Silent  |  Bonnie Betrays Clyde |
-|:------------------------:|:---------------------:|:---------------------:|
-|  **Clyde Stays Silent**  | Bonnie = 1, Clyde = 1 | Bonnie = 0, Clyde = 3 |
-| **Clyde Betrays Bonnie** | Bonnie = 3, Clyde = 0 | Bonnie = 2, Clyde = 2 |
+Interestingly enough, there is a closed form expression for all values of `m` and `n`:
 
++ When `m == 0`, the output is `n + 1`.
++ When `m == 1`, the output is `n + 2`.
++ When `m == 2`, the output is `2 * n + 3`.
++ When `m == 3`, the output is `pow(2, n + 3) - 3`.
++ When `m == 4`, the output is represented by a power tower, where we raise `2` to the power of `2`, `n + 3` times, and then subtract `3`. 
 
+There are other closed form expressions for larger and larger input values, but the notation is messy. You can see some of these in the Wikipedia article on the Ackermann function [here](https://en.wikipedia.org/wiki/Ackermann_function).
 
+The value for `ackermann(4, 2)` is given by `pow(2, ackermann(4, 1)) - 3 = pow(2, 65533) - 3`. You read that right, two raised to that large power. This is recursive by nature, and indeed `ackermann(4, 3) = pow(2, ackermann(4, 2) - 3`, which is a ridiculously large value. 
 
+The growth rate for this function is larger than an exponential function, or even a multiple exponential function. To compute the value of `ackermann(4, 2)`, it would take a modern computer on the order of 4 months to calculate. 
 
+##Conclusion
 
+Recursion is weird. And cool. Checkout the [`ackermann.cpp`](https://github.com/aalogancheney/CPlusPlus_For_Everyone/blob/master/Ackermann/ackermann.cpp), which contains the Ackermann function as well as a `main` method that computes the values for the small input shown above. Be warned, changing the values on the `for` loops will result in very long computation times, and you'll likely have to terminate your program. 
